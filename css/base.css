@@ -1,0 +1,80 @@
+/*without div, span, table, button, textarea, em, ins, strong, del, img, audio, video, a ,...*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*list of font-family is allowed, better use together with the double quote "" so that it is more clearer*/
+body {
+    font: 16px/1 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #333;
+  }
+
+/*instead of li, better we use ul and ol*/
+ul,
+ol {
+    list-style: none;
+}
+
+/*remove the default incline property of em and i*/
+/*font-style only got two value: normal , italic*/
+em,
+i {
+    font-style: normal;
+}
+
+/*add default color also, because we only can assign color at a label if the text is wrapped by a because a will assign color to the text automatically*/
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/*add this so that our img will not occur issue such that the baseline is not align well*/
+img {
+    vertical-align: middle;
+}
+
+/*add this so that we need to assign the border for the input by ourselves, outline should be none also because it will cause the border to bright when typing the input*/
+input {
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+/*add this so that we no need to write float: left; again in the css of the label*/
+.fl {
+    float: left;
+}
+
+/*add this so that we no need to write float: right; again in the css of the label*/
+.fr {
+    float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
